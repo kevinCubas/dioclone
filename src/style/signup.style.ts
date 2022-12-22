@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-    max-width: 300px;
+    max-width: 400px;
 `
 
 export const Column = styled.div`
@@ -17,27 +17,17 @@ export const Row = styled.div`
     margin-top: 20px;
 `
 
-export const Title = styled.h2`
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    max-width: 90%;
-    margin-bottom: 20px;
-    line-height: 44px;
-    color: #FFFFFF;
-`
-
-export const TitleLogin = styled.p`
+export const TitleSignUp = styled.p`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 44px;
     margin-bottom: 8px;
+    margin-top: 120px;
 `
 
-export const SubtitleLogin = styled.p`
+export const SubtitleSignUp = styled.p`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
@@ -46,21 +36,25 @@ export const SubtitleLogin = styled.p`
     margin-bottom: 35px;
 `
 
-
-export const ForgotText  = styled.p`
+export const LoginText =  styled.p`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
-    color: #E5E044;
-` 
+    color: #FFFFFF;
+`
 
-export const CreateText =  styled(Link)`
+export const LinkText =  styled(Link)`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
     color: #23DD7A;
+    text-decoration: none;
+`
+
+export const Privacy =  styled.p`
+    max-width: 275px;
 `

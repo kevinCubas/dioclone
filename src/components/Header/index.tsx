@@ -45,8 +45,8 @@ export function Header({authenticated }: IHeaderProp) {
           ) : (
             <>
               <MenuRight href='/'>Home</MenuRight>
-              <Link href="/feed"><Button title='Entrar'/></Link>
-              <Link href="/login"><Button title='Cadastrar'/></Link>
+              <Link href="/login"><Button title='Entrar'/></Link>
+              <Link href="/signup"><Button title='Cadastrar'/></Link>
             </>
           )}
         </Row>

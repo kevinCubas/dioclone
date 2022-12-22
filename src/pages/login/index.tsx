@@ -37,21 +37,25 @@ const schema = yup.object({
 export default function Login(): JSX.Element {
   const router = useRouter();
 
+  const verifyUser = (props: IFormInputs, arr) => {
+    const {email, password} = props;
+    const user = arr.find(arr => arr.email === email)
+    if(user) {
+      user.password === password ? router.push('/feed') : alert("Senha Incorreta!")
+    } else {
+      alert("Usuário não existe, faça seu cadastro.")
+    }
+  }
+
   const { control, handleSubmit, formState: { errors, isValid } } = useForm<IFormInputs>({
     resolver: yupResolver(schema),
   });
 
-  console.log(isValid, errors)
-  const onSubmit: SubmitHandler<IFormInputs>= async ({email, password}) => {
+  const onSubmit: SubmitHandler<IFormInputs>= async (props) => {
     const response = await fetch('http://localhost:3000/api/users/')
     const user = await response.json()
     const {data} = user
-    for (let i = 0; i < data.length; i++) {
-      const element = data[i];
-      if(element.email === email && element.password === password) {
-        router.push('/feed') 
-      }
-     }
+    verifyUser(props, data)
   };
 
   return (
@@ -78,7 +82,7 @@ export default function Login(): JSX.Element {
             </form>
             <Row>
               <ForgotText>Esqueci minha senha</ForgotText>
-              <CreateText>Criar conta</CreateText>
+              <CreateText href="/signup">Criar conta</CreateText>
             </Row>
           </Wrapper>
         </Column>

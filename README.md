@@ -2,8 +2,6 @@
 
 Recreation of the Digital Innovation One UI using Next.JS and Styled-components.
 
-🚧 **Is under development** 🚧
-
 ## Technologies & tools
 
 - [Next](https://nextjs.org/docs)
