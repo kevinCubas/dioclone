@@ -1,7 +1,7 @@
-import { Header } from '../components/Header';
-import { Card } from '../components/Card';
-import { UserRank } from '../components/UserRank';
-import { Column, Container, Title, TitleHighlight } from '../style/feed.style';
+import { Header } from '../../components/Header';
+import { Card } from '../../components/Card';
+import { UserRank } from '../../components/UserRank';
+import { Column, Container, Title, TitleHighlight } from '../../style/feed.style';
 
 export default function Home() {
   return (
