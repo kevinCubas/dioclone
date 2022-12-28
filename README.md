@@ -9,6 +9,7 @@ Recreation of the Digital Innovation One UI using Next.JS and Styled-components.
 - [Typescript](https://www.typescriptlang.org/)
 - [Styled-components](https://styled-components.com/docs)
 - [React-hook-form](https://react-hook-form.com/get-started)
+- [YUP](https://github.com/jquense/yup)
 
 ## Layout
 
